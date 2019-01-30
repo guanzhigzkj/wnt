@@ -15,3 +15,5 @@
 //    return view('welcome');
 //});
 Route::get('/login', 'UserController@login')->name('login');
+Route::get('/signup', 'UserController@signup')->name('signup');
+Route::resource('users', 'UserController');
