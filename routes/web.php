@@ -14,6 +14,8 @@
 //Route::get('/', function () {
 //    return view('welcome');
 //});
+Route::get('/', 'IndexController@index')->name('index');
 Route::get('/login', 'UserController@login')->name('login');
+Route::post('/dologin', 'UserController@dologin')->name('dologin');
 Route::get('/signup', 'UserController@signup')->name('signup');
-Route::resource('users', 'UserController');
+Route::post('/dosignup', 'UserController@dosignup')->name('dosignup');

@@ -22,7 +22,7 @@
         <div class="card-body">
             @include('shared._errors')
 
-            <form method="POST" action="{{ route('login') }}">
+            <form method="POST" action="{{ route('dologin') }}">
                 {{ csrf_field() }}
 
                 <div class="form-group">
