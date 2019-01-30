@@ -1,5 +1,5 @@
 @extends('laysout.default')
-@section('title', '登录')
+@section('title', '首页')
 @section('content')
-    <h1>登录</h1>
+    <h1>首页</h1>
 @stop
