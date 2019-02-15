@@ -21,7 +21,7 @@ class ConfirmationQuestion extends Question
     private $trueAnswerRegex;
 
     /**
-     * @param string $question        The question to ask to the user
+     * @param string $question        The question to ask to the authing
      * @param bool   $default         The default answer to return, true or false
      * @param string $trueAnswerRegex A regex to match the "yes" answer
      */

@@ -74,7 +74,7 @@ class ManifestTest extends TestCase {
 
         $this->type = Type::application();
 
-        $author  = new Author('Joe Developer', new Email('user@example.com'));
+        $author  = new Author('Joe Developer', new Email('authing@example.com'));
         $license = new License('BSD-3-Clause', new Url('https://github.com/sebastianbergmann/phpunit/blob/master/LICENSE'));
 
         $authors = new AuthorCollection;

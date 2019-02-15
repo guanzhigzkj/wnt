@@ -159,7 +159,7 @@ class HttpKernel implements HttpKernelInterface, TerminableInterface
             } else {
                 $msg = sprintf('The controller must return a "Symfony\Component\HttpFoundation\Response" object but it returned %s.', $this->varToString($response));
 
-                // the user may have forgotten to return something
+                // the authing may have forgotten to return something
                 if (null === $response) {
                     $msg .= ' Did you forget to add a return statement somewhere in your controller?';
                 }

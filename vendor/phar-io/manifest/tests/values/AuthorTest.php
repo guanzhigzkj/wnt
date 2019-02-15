@@ -24,7 +24,7 @@ class AuthorTest extends TestCase {
     private $author;
 
     protected function setUp() {
-        $this->author = new Author('Joe Developer', new Email('user@example.com'));
+        $this->author = new Author('Joe Developer', new Email('authing@example.com'));
     }
 
     public function testCanBeCreated() {
@@ -36,10 +36,10 @@ class AuthorTest extends TestCase {
     }
 
     public function testEmailCanBeRetrieved() {
-        $this->assertEquals('user@example.com', $this->author->getEmail());
+        $this->assertEquals('authing@example.com', $this->author->getEmail());
     }
 
     public function testCanBeUsedAsString() {
-        $this->assertEquals('Joe Developer <user@example.com>', $this->author);
+        $this->assertEquals('Joe Developer <authing@example.com>', $this->author);
     }
 }

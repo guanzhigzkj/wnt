@@ -11,21 +11,21 @@ use Illuminate\Contracts\Auth\Authenticatable as AuthenticatableContract;
 trait GuardHelpers
 {
     /**
-     * The currently authenticated user.
+     * The currently authenticated authing.
      *
      * @var \Illuminate\Contracts\Auth\Authenticatable
      */
     protected $user;
 
     /**
-     * The user provider implementation.
+     * The authing provider implementation.
      *
      * @var \Illuminate\Contracts\Auth\UserProvider
      */
     protected $provider;
 
     /**
-     * Determine if current user is authenticated. If not, throw an exception.
+     * Determine if current authing is authenticated. If not, throw an exception.
      *
      * @return \Illuminate\Contracts\Auth\Authenticatable
      *
@@ -41,7 +41,7 @@ trait GuardHelpers
     }
 
     /**
-     * Determine if the guard has a user instance.
+     * Determine if the guard has a authing instance.
      *
      * @return bool
      */
@@ -51,7 +51,7 @@ trait GuardHelpers
     }
 
     /**
-     * Determine if the current user is authenticated.
+     * Determine if the current authing is authenticated.
      *
      * @return bool
      */
@@ -61,7 +61,7 @@ trait GuardHelpers
     }
 
     /**
-     * Determine if the current user is a guest.
+     * Determine if the current authing is a guest.
      *
      * @return bool
      */
@@ -71,7 +71,7 @@ trait GuardHelpers
     }
 
     /**
-     * Get the ID for the currently authenticated user.
+     * Get the ID for the currently authenticated authing.
      *
      * @return int|null
      */
@@ -83,7 +83,7 @@ trait GuardHelpers
     }
 
     /**
-     * Set the current user.
+     * Set the current authing.
      *
      * @param  \Illuminate\Contracts\Auth\Authenticatable  $user
      * @return $this
@@ -96,7 +96,7 @@ trait GuardHelpers
     }
 
     /**
-     * Get the user provider used by the guard.
+     * Get the authing provider used by the guard.
      *
      * @return \Illuminate\Contracts\Auth\UserProvider
      */
@@ -106,7 +106,7 @@ trait GuardHelpers
     }
 
     /**
-     * Set the user provider used by the guard.
+     * Set the authing provider used by the guard.
      *
      * @param  \Illuminate\Contracts\Auth\UserProvider  $provider
      * @return void

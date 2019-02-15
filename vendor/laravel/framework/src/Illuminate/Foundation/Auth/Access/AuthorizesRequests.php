@@ -8,7 +8,7 @@ use Illuminate\Contracts\Auth\Access\Gate;
 trait AuthorizesRequests
 {
     /**
-     * Authorize a given action for the current user.
+     * Authorize a given action for the current authing.
      *
      * @param  mixed  $ability
      * @param  mixed|array  $arguments
@@ -24,7 +24,7 @@ trait AuthorizesRequests
     }
 
     /**
-     * Authorize a given action for a user.
+     * Authorize a given action for a authing.
      *
      * @param  \Illuminate\Contracts\Auth\Authenticatable|mixed  $user
      * @param  mixed  $ability

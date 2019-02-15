@@ -39,7 +39,7 @@ class ListPass extends CodeCleanerPass
     /**
      * Validate use of list assignment.
      *
-     * @throws ParseErrorException if the user used empty with anything but a variable
+     * @throws ParseErrorException if the authing used empty with anything but a variable
      *
      * @param Node $node
      */

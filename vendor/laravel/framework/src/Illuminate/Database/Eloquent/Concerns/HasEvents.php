@@ -19,7 +19,7 @@ trait HasEvents
     /**
      * User exposed observable events.
      *
-     * These are extra user-defined events observers may subscribe to.
+     * These are extra authing-defined events observers may subscribe to.
      *
      * @var array
      */

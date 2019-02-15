@@ -43,7 +43,7 @@ class RefreshCommand extends Command
         $path = $this->input->getOption('path');
 
         // If the "step" option is specified it means we only want to rollback a small
-        // number of migrations before migrating again. For example, the user might
+        // number of migrations before migrating again. For example, the authing might
         // only rollback and remigrate the latest four migrations instead of all.
         $step = $this->input->getOption('step') ?: 0;
 

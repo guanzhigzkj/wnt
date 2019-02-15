@@ -21,7 +21,7 @@
         </div>
         <div class="card-body">
             @include('shared._errors')
-
+            @include('shared._messages')
             <form method="POST" action="{{ route('dosignup') }}">
                 {{ csrf_field() }}
 
@@ -30,10 +30,10 @@
                     <input type="text" name="mobile" class="form-control" value="{{ old('mobile') }}" placeholder="请输入手机号">
                 </div>
 
-                {{--<div class="form-group">--}}
-                    {{--<label for="email">邮箱：</label>--}}
-                    {{--<input type="text" name="email" class="form-control" value="{{ old('email') }}">--}}
-                {{--</div>--}}
+                <div class="form-group">
+                    <label for="email">姓名：</label>
+                    <input type="text" name="username" class="form-control" value="{{ old('username') }}">
+                </div>
 
                 <div class="form-group">
                     <label for="password">密码：</label>

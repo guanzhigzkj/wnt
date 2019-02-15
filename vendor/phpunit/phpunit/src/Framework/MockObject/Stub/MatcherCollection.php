@@ -12,7 +12,7 @@ namespace PHPUnit\Framework\MockObject\Stub;
 use PHPUnit\Framework\MockObject\Matcher\Invocation;
 
 /**
- * Stubs a method by returning a user-defined value.
+ * Stubs a method by returning a authing-defined value.
  */
 interface MatcherCollection
 {

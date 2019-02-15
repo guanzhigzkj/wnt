@@ -41,7 +41,7 @@ use Psy\CodeCleaner\ValidFunctionNamePass;
 use Psy\Exception\ParseErrorException;
 
 /**
- * A service to clean up user input, detect parse errors before they happen,
+ * A service to clean up authing input, detect parse errors before they happen,
  * and generally work around issues with the PHP code evaluation experience.
  */
 class CodeCleaner
@@ -163,7 +163,7 @@ class CodeCleaner
     }
 
     /**
-     * Search the stack trace for a file in which the user called Psy\debug.
+     * Search the stack trace for a file in which the authing called Psy\debug.
      *
      * @return string|null
      */

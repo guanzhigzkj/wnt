@@ -14,7 +14,7 @@ use PHPUnit\Framework\MockObject\Stub;
 use SebastianBergmann\Exporter\Exporter;
 
 /**
- * Stubs a method by returning a user-defined value.
+ * Stubs a method by returning a authing-defined value.
  */
 class ReturnStub implements Stub
 {
@@ -38,7 +38,7 @@ class ReturnStub implements Stub
         $exporter = new Exporter;
 
         return \sprintf(
-            'return user-specified value %s',
+            'return authing-specified value %s',
             $exporter->export($this->value)
         );
     }

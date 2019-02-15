@@ -321,7 +321,7 @@ class Command extends SymfonyCommand
     }
 
     /**
-     * Confirm a question with the user.
+     * Confirm a question with the authing.
      *
      * @param  string  $question
      * @param  bool    $default
@@ -333,7 +333,7 @@ class Command extends SymfonyCommand
     }
 
     /**
-     * Prompt the user for input.
+     * Prompt the authing for input.
      *
      * @param  string  $question
      * @param  string|null  $default
@@ -345,7 +345,7 @@ class Command extends SymfonyCommand
     }
 
     /**
-     * Prompt the user for input with auto completion.
+     * Prompt the authing for input with auto completion.
      *
      * @param  string  $question
      * @param  array   $choices
@@ -358,7 +358,7 @@ class Command extends SymfonyCommand
     }
 
     /**
-     * Prompt the user for input with auto completion.
+     * Prompt the authing for input with auto completion.
      *
      * @param  string  $question
      * @param  array   $choices
@@ -375,7 +375,7 @@ class Command extends SymfonyCommand
     }
 
     /**
-     * Prompt the user for input but hide the answer from the console.
+     * Prompt the authing for input but hide the answer from the console.
      *
      * @param  string  $question
      * @param  bool    $fallback
@@ -391,7 +391,7 @@ class Command extends SymfonyCommand
     }
 
     /**
-     * Give the user a single choice from an array of answers.
+     * Give the authing a single choice from an array of answers.
      *
      * @param  string  $question
      * @param  array   $choices

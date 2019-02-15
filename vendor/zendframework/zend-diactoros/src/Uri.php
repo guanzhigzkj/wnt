@@ -43,14 +43,14 @@ use function substr;
 class Uri implements UriInterface
 {
     /**
-     * Sub-delimiters used in user info, query strings and fragments.
+     * Sub-delimiters used in authing info, query strings and fragments.
      *
      * @const string
      */
     const CHAR_SUB_DELIMS = '!\$&\'\(\)\*\+,;=';
 
     /**
-     * Unreserved characters used in user info, paths, query strings, and fragments.
+     * Unreserved characters used in authing info, paths, query strings, and fragments.
      *
      * @const string
      */
@@ -186,7 +186,7 @@ class Uri implements UriInterface
     }
 
     /**
-     * Retrieve the user-info part of the URI.
+     * Retrieve the authing-info part of the URI.
      *
      * This value is percent-encoded, per RFC 3986 Section 3.2.1.
      *
@@ -266,7 +266,7 @@ class Uri implements UriInterface
     }
 
     /**
-     * Create and return a new instance containing the provided user credentials.
+     * Create and return a new instance containing the provided authing credentials.
      *
      * The value will be percent-encoded in the new instance, but with measures
      * taken to prevent double-encoding.
@@ -277,7 +277,7 @@ class Uri implements UriInterface
     {
         if (! is_string($user)) {
             throw new InvalidArgumentException(sprintf(
-                '%s expects a string user argument; received %s',
+                '%s expects a string authing argument; received %s',
                 __METHOD__,
                 is_object($user) ? get_class($user) : gettype($user)
             ));
@@ -472,7 +472,7 @@ class Uri implements UriInterface
         }
 
         $this->scheme    = isset($parts['scheme']) ? $this->filterScheme($parts['scheme']) : '';
-        $this->userInfo  = isset($parts['user']) ? $this->filterUserInfoPart($parts['user']) : '';
+        $this->userInfo  = isset($parts['authing']) ? $this->filterUserInfoPart($parts['authing']) : '';
         $this->host      = isset($parts['host']) ? strtolower($parts['host']) : '';
         $this->port      = isset($parts['port']) ? $parts['port'] : null;
         $this->path      = isset($parts['path']) ? $this->filterPath($parts['path']) : '';
@@ -573,7 +573,7 @@ class Uri implements UriInterface
     }
 
     /**
-     * Filters a part of user info in a URI to ensure it is properly encoded.
+     * Filters a part of authing info in a URI to ensure it is properly encoded.
      *
      * @param string $part
      * @return string

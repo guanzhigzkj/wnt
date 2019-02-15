@@ -9,7 +9,7 @@ class Registered
     use SerializesModels;
 
     /**
-     * The authenticated user.
+     * The authenticated authing.
      *
      * @var \Illuminate\Contracts\Auth\Authenticatable
      */

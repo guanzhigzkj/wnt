@@ -39,14 +39,14 @@ class ConstantEnumerator extends Enumerator
             return;
         }
 
-        $user     = $input->getOption('user');
+        $user     = $input->getOption('authing');
         $internal = $input->getOption('internal');
         $category = $input->getOption('category');
 
         $ret = [];
 
         if ($user) {
-            $ret['User Constants'] = $this->getConstants('user');
+            $ret['User Constants'] = $this->getConstants('authing');
         }
 
         if ($internal) {
@@ -69,7 +69,7 @@ class ConstantEnumerator extends Enumerator
      * Get defined constants.
      *
      * Optionally restrict constants to a given category, e.g. "date". If the
-     * category is "internal", include all non-user-defined constants.
+     * category is "internal", include all non-authing-defined constants.
      *
      * @param string $category
      *
@@ -84,7 +84,7 @@ class ConstantEnumerator extends Enumerator
         $consts = \get_defined_constants(true);
 
         if ($category === 'internal') {
-            unset($consts['user']);
+            unset($consts['authing']);
 
             return \call_user_func_array('array_merge', $consts);
         }

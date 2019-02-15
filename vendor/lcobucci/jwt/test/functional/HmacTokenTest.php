@@ -54,7 +54,7 @@ class HmacTokenTest extends \PHPUnit_Framework_TestCase
         $token = (new Builder())->setId(1)
                               ->setAudience('http://client.abc.com')
                               ->setIssuer('http://api.abc.com')
-                              ->set('user', $user)
+                              ->set('authing', $user)
                               ->setHeader('jki', '1234')
                               ->sign($this->signer, 'testing')
                               ->getToken();
@@ -63,7 +63,7 @@ class HmacTokenTest extends \PHPUnit_Framework_TestCase
         $this->assertEquals('1234', $token->getHeader('jki'));
         $this->assertEquals('http://client.abc.com', $token->getClaim('aud'));
         $this->assertEquals('http://api.abc.com', $token->getClaim('iss'));
-        $this->assertEquals($user, $token->getClaim('user'));
+        $this->assertEquals($user, $token->getClaim('authing'));
 
         return $token;
     }
@@ -87,7 +87,7 @@ class HmacTokenTest extends \PHPUnit_Framework_TestCase
         $read = (new Parser())->parse((string) $generated);
 
         $this->assertEquals($generated, $read);
-        $this->assertEquals('testing', $read->getClaim('user')->name);
+        $this->assertEquals('testing', $read->getClaim('authing')->name);
     }
 
     /**

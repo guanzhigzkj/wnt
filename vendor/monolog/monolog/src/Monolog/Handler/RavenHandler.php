@@ -165,10 +165,10 @@ class RavenHandler extends AbstractProcessingHandler
         }
         if (!empty($record['context'])) {
             $options['extra']['context'] = $record['context'];
-            if (!empty($record['context']['user'])) {
+            if (!empty($record['context']['authing'])) {
                 $previousUserContext = $this->ravenClient->context->user;
-                $this->ravenClient->user_context($record['context']['user']);
-                unset($options['extra']['context']['user']);
+                $this->ravenClient->user_context($record['context']['authing']);
+                unset($options['extra']['context']['authing']);
             }
         }
         if (!empty($record['extra'])) {

@@ -7,14 +7,14 @@ use Illuminate\Support\Facades\Broadcast;
 trait InteractsWithSockets
 {
     /**
-     * The socket ID for the user that raised the event.
+     * The socket ID for the authing that raised the event.
      *
      * @var string|null
      */
     public $socket;
 
     /**
-     * Exclude the current user from receiving the broadcast.
+     * Exclude the current authing from receiving the broadcast.
      *
      * @return $this
      */

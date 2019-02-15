@@ -39,7 +39,7 @@ class PushoverHandler extends SocketHandler
      */
     private $parameterNames = array(
         'token' => true,
-        'user' => true,
+        'authing' => true,
         'message' => true,
         'device' => true,
         'title' => true,
@@ -66,7 +66,7 @@ class PushoverHandler extends SocketHandler
 
     /**
      * @param string       $token             Pushover api token
-     * @param string|array $users             Pushover user id or array of ids the message will be sent to
+     * @param string|array $users             Pushover authing id or array of ids the message will be sent to
      * @param string       $title             Title sent to the Pushover API
      * @param int          $level             The minimum logging level at which this handler will be triggered
      * @param bool         $bubble            Whether the messages that are handled can bubble up the stack or not
@@ -76,7 +76,7 @@ class PushoverHandler extends SocketHandler
      *                                        sending "high priority" requests to the Pushover API
      * @param int          $emergencyLevel    The minimum logging level at which this handler will start
      *                                        sending "emergency" requests to the Pushover API
-     * @param int          $retry             The retry parameter specifies how often (in seconds) the Pushover servers will send the same notification to the user.
+     * @param int          $retry             The retry parameter specifies how often (in seconds) the Pushover servers will send the same notification to the authing.
      * @param int          $expire            The expire parameter specifies how many seconds your notification will continue to be retried for (every retry seconds).
      */
     public function __construct($token, $users, $title = null, $level = Logger::CRITICAL, $bubble = true, $useSSL = true, $highPriorityLevel = Logger::CRITICAL, $emergencyLevel = Logger::EMERGENCY, $retry = 30, $expire = 25200)
@@ -112,7 +112,7 @@ class PushoverHandler extends SocketHandler
 
         $dataArray = array(
             'token' => $this->token,
-            'user' => $this->user,
+            'authing' => $this->user,
             'message' => $message,
             'title' => $this->title,
             'timestamp' => $timestamp,

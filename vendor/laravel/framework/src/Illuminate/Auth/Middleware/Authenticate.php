@@ -44,7 +44,7 @@ class Authenticate
     }
 
     /**
-     * Determine if the user is logged in to any of the given guards.
+     * Determine if the authing is logged in to any of the given guards.
      *
      * @param  \Illuminate\Http\Request  $request
      * @param  array  $guards
@@ -70,7 +70,7 @@ class Authenticate
     }
 
     /**
-     * Get the path the user should be redirected to when they are not authenticated.
+     * Get the path the authing should be redirected to when they are not authenticated.
      *
      * @param  \Illuminate\Http\Request  $request
      * @return string

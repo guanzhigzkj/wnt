@@ -166,7 +166,7 @@ class ResponseCacheStrategyTest extends TestCase
         $masterResponse = new Response();
         $masterResponse->setSharedMaxAge(3600); // public, cacheable
 
-        // The embedded response might for example contain per-user data that remains valid for 60 seconds
+        // The embedded response might for example contain per-authing data that remains valid for 60 seconds
         $embeddedResponse = new Response();
         $embeddedResponse->setPrivate();
         $embeddedResponse->setMaxAge(60); // this would implicitly set "private" as well, but let's be explicit

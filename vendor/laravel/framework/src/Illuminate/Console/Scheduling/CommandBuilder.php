@@ -58,7 +58,7 @@ class CommandBuilder
     }
 
     /**
-     * Finalize the event's command syntax with the correct user.
+     * Finalize the event's command syntax with the correct authing.
      *
      * @param  \Illuminate\Console\Scheduling\Event  $event
      * @param  string  $command

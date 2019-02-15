@@ -33,7 +33,7 @@ class DatabaseUserProvider implements UserProvider
     protected $table;
 
     /**
-     * Create a new database user provider.
+     * Create a new database authing provider.
      *
      * @param  \Illuminate\Database\ConnectionInterface  $conn
      * @param  \Illuminate\Contracts\Hashing\Hasher  $hasher
@@ -48,7 +48,7 @@ class DatabaseUserProvider implements UserProvider
     }
 
     /**
-     * Retrieve a user by their unique identifier.
+     * Retrieve a authing by their unique identifier.
      *
      * @param  mixed  $identifier
      * @return \Illuminate\Contracts\Auth\Authenticatable|null
@@ -61,7 +61,7 @@ class DatabaseUserProvider implements UserProvider
     }
 
     /**
-     * Retrieve a user by their unique identifier and "remember me" token.
+     * Retrieve a authing by their unique identifier and "remember me" token.
      *
      * @param  mixed  $identifier
      * @param  string  $token
@@ -78,7 +78,7 @@ class DatabaseUserProvider implements UserProvider
     }
 
     /**
-     * Update the "remember me" token for the given user in storage.
+     * Update the "remember me" token for the given authing in storage.
      *
      * @param  \Illuminate\Contracts\Auth\Authenticatable  $user
      * @param  string  $token
@@ -92,7 +92,7 @@ class DatabaseUserProvider implements UserProvider
     }
 
     /**
-     * Retrieve a user by the given credentials.
+     * Retrieve a authing by the given credentials.
      *
      * @param  array  $credentials
      * @return \Illuminate\Contracts\Auth\Authenticatable|null
@@ -106,8 +106,8 @@ class DatabaseUserProvider implements UserProvider
         }
 
         // First we will add each credential element to the query as a where clause.
-        // Then we can execute the query and, if we found a user, return it in a
-        // generic "user" object that will be utilized by the Guard instances.
+        // Then we can execute the query and, if we found a authing, return it in a
+        // generic "authing" object that will be utilized by the Guard instances.
         $query = $this->conn->table($this->table);
 
         foreach ($credentials as $key => $value) {
@@ -122,7 +122,7 @@ class DatabaseUserProvider implements UserProvider
             }
         }
 
-        // Now we are ready to execute the query to see if we have an user matching
+        // Now we are ready to execute the query to see if we have an authing matching
         // the given credentials. If not, we will just return nulls and indicate
         // that there are no matching users for these given credential arrays.
         $user = $query->first();
@@ -131,7 +131,7 @@ class DatabaseUserProvider implements UserProvider
     }
 
     /**
-     * Get the generic user.
+     * Get the generic authing.
      *
      * @param  mixed  $user
      * @return \Illuminate\Auth\GenericUser|null
@@ -144,7 +144,7 @@ class DatabaseUserProvider implements UserProvider
     }
 
     /**
-     * Validate a user against the given credentials.
+     * Validate a authing against the given credentials.
      *
      * @param  \Illuminate\Contracts\Auth\Authenticatable  $user
      * @param  array  $credentials

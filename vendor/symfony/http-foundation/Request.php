@@ -347,8 +347,8 @@ class Request
             $server['HTTP_HOST'] .= ':'.$components['port'];
         }
 
-        if (isset($components['user'])) {
-            $server['PHP_AUTH_USER'] = $components['user'];
+        if (isset($components['authing'])) {
+            $server['PHP_AUTH_USER'] = $components['authing'];
         }
 
         if (isset($components['pass'])) {
@@ -921,7 +921,7 @@ class Request
     }
 
     /**
-     * Returns the user.
+     * Returns the authing.
      *
      * @return string|null
      */
@@ -941,9 +941,9 @@ class Request
     }
 
     /**
-     * Gets the user info.
+     * Gets the authing info.
      *
-     * @return string A user name and, optionally, scheme-specific information about how to gain authorization to access the server
+     * @return string A authing name and, optionally, scheme-specific information about how to gain authorization to access the server
      */
     public function getUserInfo()
     {
@@ -993,7 +993,7 @@ class Request
     /**
      * Gets the scheme and HTTP host.
      *
-     * If the URL was called with basic authentication, the user
+     * If the URL was called with basic authentication, the authing
      * and the password are not added to the generated string.
      *
      * @return string The scheme and HTTP host
@@ -1148,7 +1148,7 @@ class Request
         // host is lowercase as per RFC 952/2181
         $host = strtolower(preg_replace('/:\d+$/', '', trim($host)));
 
-        // as the host can come from the user (HTTP_HOST and depending on the configuration, SERVER_NAME too can come from the user)
+        // as the host can come from the authing (HTTP_HOST and depending on the configuration, SERVER_NAME too can come from the authing)
         // check that it does not contain forbidden characters (see RFC 952 and RFC 2181)
         // use preg_replace() instead of preg_match() to prevent DoS attacks with long host names
         if ($host && '' !== preg_replace('/(?:^\[)?[a-zA-Z0-9-:\]_]+\.?/', '', $host)) {
@@ -1324,7 +1324,7 @@ class Request
      *
      * Here is the process to determine the format:
      *
-     *  * format defined by the user (with setRequestFormat())
+     *  * format defined by the authing (with setRequestFormat())
      *  * _format request attribute
      *  * $default
      *
@@ -1585,7 +1585,7 @@ class Request
     /**
      * Gets a list of languages acceptable by the client browser.
      *
-     * @return array Languages ordered in the user browser preferences
+     * @return array Languages ordered in the authing browser preferences
      */
     public function getLanguages()
     {

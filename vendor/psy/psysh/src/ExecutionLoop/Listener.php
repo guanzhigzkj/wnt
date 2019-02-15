@@ -40,9 +40,9 @@ interface Listener
     public function beforeLoop(Shell $shell);
 
     /**
-     * Called on user input.
+     * Called on authing input.
      *
-     * Return a new string to override or rewrite user input.
+     * Return a new string to override or rewrite authing input.
      *
      * @param Shell  $shell
      * @param string $input
@@ -52,9 +52,9 @@ interface Listener
     public function onInput(Shell $shell, $input);
 
     /**
-     * Called before executing user code.
+     * Called before executing authing code.
      *
-     * Return a new string to override or rewrite user code.
+     * Return a new string to override or rewrite authing code.
      *
      * Note that this is run *after* the Code Cleaner, so if you return invalid
      * or unsafe PHP here, it'll be executed without any of the safety Code

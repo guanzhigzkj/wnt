@@ -12,14 +12,14 @@ class Attempting
     public $guard;
 
     /**
-     * The credentials for the user.
+     * The credentials for the authing.
      *
      * @var array
      */
     public $credentials;
 
     /**
-     * Indicates if the user should be "remembered".
+     * Indicates if the authing should be "remembered".
      *
      * @var bool
      */

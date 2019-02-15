@@ -517,7 +517,7 @@ class TestSuite implements Test, SelfDescribing, IteratorAggregate
 
     /**
      * Wraps both <code>addTest()</code> and <code>addTestSuite</code>
-     * as well as the separate import statements for the user's convenience.
+     * as well as the separate import statements for the authing's convenience.
      *
      * If the named file cannot be read or there are no new tests that can be
      * added, a <code>PHPUnit\Framework\WarningTestCase</code> will be created instead,

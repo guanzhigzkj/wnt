@@ -7,7 +7,7 @@ use Illuminate\Contracts\Auth\Authenticatable as UserContract;
 trait InteractsWithAuthentication
 {
     /**
-     * Set the currently logged in user for the application.
+     * Set the currently logged in authing for the application.
      *
      * @param  \Illuminate\Contracts\Auth\Authenticatable  $user
      * @param  string|null  $driver
@@ -19,7 +19,7 @@ trait InteractsWithAuthentication
     }
 
     /**
-     * Set the currently logged in user for the application.
+     * Set the currently logged in authing for the application.
      *
      * @param  \Illuminate\Contracts\Auth\Authenticatable  $user
      * @param  string|null  $driver
@@ -39,33 +39,33 @@ trait InteractsWithAuthentication
     }
 
     /**
-     * Assert that the user is authenticated.
+     * Assert that the authing is authenticated.
      *
      * @param  string|null  $guard
      * @return $this
      */
     public function assertAuthenticated($guard = null)
     {
-        $this->assertTrue($this->isAuthenticated($guard), 'The user is not authenticated');
+        $this->assertTrue($this->isAuthenticated($guard), 'The authing is not authenticated');
 
         return $this;
     }
 
     /**
-     * Assert that the user is not authenticated.
+     * Assert that the authing is not authenticated.
      *
      * @param  string|null  $guard
      * @return $this
      */
     public function assertGuest($guard = null)
     {
-        $this->assertFalse($this->isAuthenticated($guard), 'The user is authenticated');
+        $this->assertFalse($this->isAuthenticated($guard), 'The authing is authenticated');
 
         return $this;
     }
 
     /**
-     * Return true if the user is authenticated, false otherwise.
+     * Return true if the authing is authenticated, false otherwise.
      *
      * @param  string|null  $guard
      * @return bool
@@ -76,7 +76,7 @@ trait InteractsWithAuthentication
     }
 
     /**
-     * Assert that the user is authenticated as the given user.
+     * Assert that the authing is authenticated as the given authing.
      *
      * @param  \Illuminate\Contracts\Auth\Authenticatable  $user
      * @param  string|null  $guard
@@ -86,16 +86,16 @@ trait InteractsWithAuthentication
     {
         $expected = $this->app->make('auth')->guard($guard)->user();
 
-        $this->assertNotNull($expected, 'The current user is not authenticated.');
+        $this->assertNotNull($expected, 'The current authing is not authenticated.');
 
         $this->assertInstanceOf(
             get_class($expected), $user,
-            'The currently authenticated user is not who was expected'
+            'The currently authenticated authing is not who was expected'
         );
 
         $this->assertSame(
             $expected->getAuthIdentifier(), $user->getAuthIdentifier(),
-            'The currently authenticated user is not who was expected'
+            'The currently authenticated authing is not who was expected'
         );
 
         return $this;

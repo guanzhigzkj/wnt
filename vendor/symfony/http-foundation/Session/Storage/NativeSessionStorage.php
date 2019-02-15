@@ -64,7 +64,7 @@ class NativeSessionStorage implements SessionStorageInterface
      * but we omit 'session.' from the beginning of the keys for convenience.
      *
      * ("auto_start", is not supported as it tells PHP to start a session before
-     * PHP starts to execute user-land code. Setting during runtime has no effect).
+     * PHP starts to execute authing-land code. Setting during runtime has no effect).
      *
      * cache_limiter, "" (use "0" to prevent headers from being sent entirely).
      * cache_expire, "0"

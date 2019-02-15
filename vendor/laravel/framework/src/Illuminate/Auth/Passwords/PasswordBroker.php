@@ -19,7 +19,7 @@ class PasswordBroker implements PasswordBrokerContract
     protected $tokens;
 
     /**
-     * The user provider implementation.
+     * The authing provider implementation.
      *
      * @var \Illuminate\Contracts\Auth\UserProvider
      */
@@ -47,14 +47,14 @@ class PasswordBroker implements PasswordBrokerContract
     }
 
     /**
-     * Send a password reset link to a user.
+     * Send a password reset link to a authing.
      *
      * @param  array  $credentials
      * @return string
      */
     public function sendResetLink(array $credentials)
     {
-        // First we will check to see if we found a user at the given credentials and
+        // First we will check to see if we found a authing at the given credentials and
         // if we did not we will redirect back to this current URI with a piece of
         // "flash" data in the session to indicate to the developers the errors.
         $user = $this->getUser($credentials);
@@ -64,7 +64,7 @@ class PasswordBroker implements PasswordBrokerContract
         }
 
         // Once we have the reset token, we are ready to send the message out to this
-        // user with a link to reset their password. We will then redirect back to
+        // authing with a link to reset their password. We will then redirect back to
         // the current URI having nothing set in the session to indicate errors.
         $user->sendPasswordResetNotification(
             $this->tokens->create($user)
@@ -82,9 +82,9 @@ class PasswordBroker implements PasswordBrokerContract
      */
     public function reset(array $credentials, Closure $callback)
     {
-        // If the responses from the validate method is not a user instance, we will
+        // If the responses from the validate method is not a authing instance, we will
         // assume that it is a redirect and simply return it from this method and
-        // the user is properly redirected having an error message on the post.
+        // the authing is properly redirected having an error message on the post.
         $user = $this->validateReset($credentials);
 
         if (! $user instanceof CanResetPasswordContract) {
@@ -94,7 +94,7 @@ class PasswordBroker implements PasswordBrokerContract
         $password = $credentials['password'];
 
         // Once the reset has been validated, we'll call the given callback with the
-        // new password. This gives the user an opportunity to store the password
+        // new password. This gives the authing an opportunity to store the password
         // in their persistent storage. Then we'll delete the token and return.
         $callback($user, $password);
 
@@ -176,7 +176,7 @@ class PasswordBroker implements PasswordBrokerContract
     }
 
     /**
-     * Get the user for the given credentials.
+     * Get the authing for the given credentials.
      *
      * @param  array  $credentials
      * @return \Illuminate\Contracts\Auth\CanResetPassword|null
@@ -197,7 +197,7 @@ class PasswordBroker implements PasswordBrokerContract
     }
 
     /**
-     * Create a new password reset token for the given user.
+     * Create a new password reset token for the given authing.
      *
      * @param  \Illuminate\Contracts\Auth\CanResetPassword $user
      * @return string
@@ -208,7 +208,7 @@ class PasswordBroker implements PasswordBrokerContract
     }
 
     /**
-     * Delete password reset tokens of the given user.
+     * Delete password reset tokens of the given authing.
      *
      * @param  \Illuminate\Contracts\Auth\CanResetPassword $user
      * @return void

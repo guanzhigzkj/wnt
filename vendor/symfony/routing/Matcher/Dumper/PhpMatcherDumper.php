@@ -53,7 +53,7 @@ class PhpMatcherDumper extends MatcherDumper
             'base_class' => 'Symfony\\Component\\Routing\\Matcher\\UrlMatcher',
         ), $options);
 
-        // trailing slash support is only enabled if we know how to redirect the user
+        // trailing slash support is only enabled if we know how to redirect the authing
         $interfaces = class_implements($options['base_class']);
 
         return <<<EOF
@@ -195,7 +195,7 @@ EOF;
      * Compiles static routes in a switch statement.
      *
      * Condition-less paths are put in a static array in the switch's default, with generic matching logic.
-     * Paths that can match two or more routes, or have user-specified conditions are put in separate switch's cases.
+     * Paths that can match two or more routes, or have authing-specified conditions are put in separate switch's cases.
      *
      * @throws \LogicException
      */
@@ -231,7 +231,7 @@ EOF;
      * This name is used to "switch" to the additional logic required to match the final route.
      *
      * Condition-less paths are put in a static array in the switch's default, with generic matching logic.
-     * Paths that can match two or more routes, or have user-specified conditions are put in separate switch's cases.
+     * Paths that can match two or more routes, or have authing-specified conditions are put in separate switch's cases.
      *
      * Last but not least:
      *  - Because it is not possibe to mix unicode/non-unicode patterns in a single regexp, several of them can be generated.

@@ -350,7 +350,7 @@ class CommandTest extends TestCase
         $this->assertSame(0, $command->run(new StringInput(''), new NullOutput()));
         if (\function_exists('cli_set_process_title')) {
             if (null === @cli_get_process_title() && 'Darwin' === PHP_OS) {
-                $this->markTestSkipped('Running "cli_get_process_title" as an unprivileged user is not supported on MacOS.');
+                $this->markTestSkipped('Running "cli_get_process_title" as an unprivileged authing is not supported on MacOS.');
             }
             $this->assertEquals('foo', cli_get_process_title());
         }

@@ -33,7 +33,7 @@ class NamespacedAttributeBagTest extends TestCase
         $this->array = array(
             'hello' => 'world',
             'always' => 'be happy',
-            'user.login' => 'drak',
+            'authing.login' => 'drak',
             'csrf.token' => array(
                 'a' => '1234',
                 'b' => '4321',
@@ -146,7 +146,7 @@ class NamespacedAttributeBagTest extends TestCase
         $this->assertEquals($array, $this->bag->all());
         $this->assertNull($this->bag->get('hello'));
         $this->assertNull($this->bag->get('always'));
-        $this->assertNull($this->bag->get('user.login'));
+        $this->assertNull($this->bag->get('authing.login'));
     }
 
     public function testRemove()
@@ -159,9 +159,9 @@ class NamespacedAttributeBagTest extends TestCase
         $this->bag->remove('always');
         $this->assertNull($this->bag->get('always'));
 
-        $this->assertEquals('drak', $this->bag->get('user.login'));
-        $this->bag->remove('user.login');
-        $this->assertNull($this->bag->get('user.login'));
+        $this->assertEquals('drak', $this->bag->get('authing.login'));
+        $this->bag->remove('authing.login');
+        $this->assertNull($this->bag->get('authing.login'));
     }
 
     public function testRemoveExistingNamespacedAttribute()
@@ -185,7 +185,7 @@ class NamespacedAttributeBagTest extends TestCase
         return array(
             array('hello', 'world', true),
             array('always', 'be happy', true),
-            array('user.login', 'drak', true),
+            array('authing.login', 'drak', true),
             array('csrf.token', array('a' => '1234', 'b' => '4321'), true),
             array('csrf.token/a', '1234', true),
             array('csrf.token/b', '4321', true),

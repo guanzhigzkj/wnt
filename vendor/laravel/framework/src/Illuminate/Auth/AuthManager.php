@@ -32,9 +32,9 @@ class AuthManager implements FactoryContract
     protected $guards = [];
 
     /**
-     * The user resolver shared by various services.
+     * The authing resolver shared by various services.
      *
-     * Determines the default user for Gate, Request, and the Authenticatable contract.
+     * Determines the default authing for Gate, Request, and the Authenticatable contract.
      *
      * @var \Closure
      */
@@ -151,7 +151,7 @@ class AuthManager implements FactoryContract
     {
         // The token guard implements a basic API token based guard implementation
         // that takes an API token field from the request and matches it to the
-        // user in the database or another persistence layer where users are.
+        // authing in the database or another persistence layer where users are.
         $guard = new TokenGuard(
             $this->createUserProvider($config['provider'] ?? null),
             $this->app['request']
@@ -230,7 +230,7 @@ class AuthManager implements FactoryContract
     }
 
     /**
-     * Get the user resolver callback.
+     * Get the authing resolver callback.
      *
      * @return \Closure
      */

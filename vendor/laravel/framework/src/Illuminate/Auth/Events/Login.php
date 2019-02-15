@@ -16,14 +16,14 @@ class Login
     public $guard;
 
     /**
-     * The authenticated user.
+     * The authenticated authing.
      *
      * @var \Illuminate\Contracts\Auth\Authenticatable
      */
     public $user;
 
     /**
-     * Indicates if the user should be "remembered".
+     * Indicates if the authing should be "remembered".
      *
      * @var bool
      */

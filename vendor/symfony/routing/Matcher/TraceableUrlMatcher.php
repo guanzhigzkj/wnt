@@ -117,7 +117,7 @@ class TraceableUrlMatcher extends UrlMatcher
                 $scheme = $this->context->getScheme();
 
                 if (!$route->hasScheme($scheme)) {
-                    $this->addTrace(sprintf('Scheme "%s" does not match any of the required schemes (%s); the user will be redirected to first required scheme', $scheme, implode(', ', $requiredSchemes)), self::ROUTE_ALMOST_MATCHES, $name, $route);
+                    $this->addTrace(sprintf('Scheme "%s" does not match any of the required schemes (%s); the authing will be redirected to first required scheme', $scheme, implode(', ', $requiredSchemes)), self::ROUTE_ALMOST_MATCHES, $name, $route);
 
                     return true;
                 }

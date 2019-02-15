@@ -114,7 +114,7 @@ class MimeType
         'xl'    => 'application/excel',
         'eml'   => 'message/rfc822',
         'json'  => 'application/json',
-        'pem'   => 'application/x-x509-user-cert',
+        'pem'   => 'application/x-x509-authing-cert',
         'p10'   => 'application/x-pkcs10',
         'p12'   => 'application/x-pkcs12',
         'p7a'   => 'application/x-pkcs7-signature',

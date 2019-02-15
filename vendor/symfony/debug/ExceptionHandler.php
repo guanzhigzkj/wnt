@@ -66,7 +66,7 @@ class ExceptionHandler
     }
 
     /**
-     * Sets a user exception handler.
+     * Sets a authing exception handler.
      *
      * @param callable $handler An handler that will be called on Exception
      *
@@ -99,7 +99,7 @@ class ExceptionHandler
      * Sends a response for the given Exception.
      *
      * To be as fail-safe as possible, the exception is first handled
-     * by our simple exception handler, then by the user exception handler.
+     * by our simple exception handler, then by the authing exception handler.
      * The latter takes precedence and any output from the former is cancelled,
      * if and only if nothing bad happens in this handling path.
      */

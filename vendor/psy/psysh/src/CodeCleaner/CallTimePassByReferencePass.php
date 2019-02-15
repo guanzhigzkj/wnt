@@ -18,7 +18,7 @@ use PhpParser\Node\Expr\StaticCall;
 use Psy\Exception\FatalErrorException;
 
 /**
- * Validate that the user did not use the call-time pass-by-reference that causes a fatal error.
+ * Validate that the authing did not use the call-time pass-by-reference that causes a fatal error.
  *
  * As of PHP 5.4.0, call-time pass-by-reference was removed, so using it will raise a fatal error.
  *
@@ -31,7 +31,7 @@ class CallTimePassByReferencePass extends CodeCleanerPass
     /**
      * Validate of use call-time pass-by-reference.
      *
-     * @throws RuntimeException if the user used call-time pass-by-reference
+     * @throws RuntimeException if the authing used call-time pass-by-reference
      *
      * @param Node $node
      */

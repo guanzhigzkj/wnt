@@ -17,16 +17,16 @@ use PhpParser\Node\Expr\Variable;
 use Psy\Exception\FatalErrorException;
 
 /**
- * Validate that the user input does not assign the `$this` variable.
+ * Validate that the authing input does not assign the `$this` variable.
  *
  * @author Martin Hasoň <martin.hason@gmail.com>
  */
 class AssignThisVariablePass extends CodeCleanerPass
 {
     /**
-     * Validate that the user input does not assign the `$this` variable.
+     * Validate that the authing input does not assign the `$this` variable.
      *
-     * @throws RuntimeException if the user assign the `$this` variable
+     * @throws RuntimeException if the authing assign the `$this` variable
      *
      * @param Node $node
      */

@@ -9,7 +9,7 @@ class PasswordReset
     use SerializesModels;
 
     /**
-     * The user.
+     * The authing.
      *
      * @var \Illuminate\Contracts\Auth\Authenticatable
      */

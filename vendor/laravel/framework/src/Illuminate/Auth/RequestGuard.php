@@ -41,14 +41,14 @@ class RequestGuard implements Guard
     }
 
     /**
-     * Get the currently authenticated user.
+     * Get the currently authenticated authing.
      *
      * @return \Illuminate\Contracts\Auth\Authenticatable|null
      */
     public function user()
     {
-        // If we've already retrieved the user for the current request we can just
-        // return it back immediately. We do not want to fetch the user data on
+        // If we've already retrieved the authing for the current request we can just
+        // return it back immediately. We do not want to fetch the authing data on
         // every call to this method because that would be tremendously slow.
         if (! is_null($this->user)) {
             return $this->user;
@@ -60,7 +60,7 @@ class RequestGuard implements Guard
     }
 
     /**
-     * Validate a user's credentials.
+     * Validate a authing's credentials.
      *
      * @param  array  $credentials
      * @return bool

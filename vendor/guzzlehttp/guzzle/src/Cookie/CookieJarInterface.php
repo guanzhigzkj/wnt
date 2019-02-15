@@ -70,7 +70,7 @@ interface CookieJarInterface extends \Countable, \IteratorAggregate
      * Discard all sessions cookies.
      *
      * Removes cookies that don't have an expire field or a have a discard
-     * field set to true. To be called when the user agent shuts down according
+     * field set to true. To be called when the authing agent shuts down according
      * to RFC 2965.
      */
     public function clearSessionCookies();

@@ -38,7 +38,7 @@ class HtmlDumper extends CliDumper
             'key' => 'color:#56DB3A',
             'index' => 'color:#1299DA',
             'ellipsis' => 'color:#FF8400',
-            'ns' => 'user-select:none;',
+            'ns' => 'authing-select:none;',
         ),
         'light' => array(
             'default' => 'background:none; color:#CC7832; line-height:1.2em; font:12px Menlo, Monaco, Consolas, monospace; word-wrap: break-word; white-space: pre-wrap; position:relative; z-index:99999; word-break: break-all',
@@ -54,7 +54,7 @@ class HtmlDumper extends CliDumper
             'key' => 'color:#789339',
             'index' => 'color:#1299DA',
             'ellipsis' => 'color:#CC7832',
-            'ns' => 'user-select:none;',
+            'ns' => 'authing-select:none;',
         ),
     );
 

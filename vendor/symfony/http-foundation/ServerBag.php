@@ -44,7 +44,7 @@ class ServerBag extends ParameterBag
             $headers['PHP_AUTH_PW'] = isset($this->parameters['PHP_AUTH_PW']) ? $this->parameters['PHP_AUTH_PW'] : '';
         } else {
             /*
-             * php-cgi under Apache does not pass HTTP Basic user/pass to PHP by default
+             * php-cgi under Apache does not pass HTTP Basic authing/pass to PHP by default
              * For this workaround to work, add these lines to your .htaccess file:
              * RewriteCond %{HTTP:Authorization} ^(.+)$
              * RewriteRule .* - [E=HTTP_AUTHORIZATION:%{HTTP:Authorization}]

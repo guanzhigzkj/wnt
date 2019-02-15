@@ -38,7 +38,7 @@ class ReturnCallback implements Stub
             }
 
             return \sprintf(
-                'return result of user defined callback %s%s%s() with the ' .
+                'return result of authing defined callback %s%s%s() with the ' .
                 'passed arguments',
                 $class,
                 $type,
@@ -46,7 +46,7 @@ class ReturnCallback implements Stub
             );
         }
 
-        return 'return result of user defined callback ' . $this->callback .
+        return 'return result of authing defined callback ' . $this->callback .
                ' with the passed arguments';
     }
 }

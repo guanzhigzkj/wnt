@@ -101,7 +101,7 @@ trait TesterTrait
     }
 
     /**
-     * Sets the user inputs.
+     * Sets the authing inputs.
      *
      * @param array $inputs An array of strings representing each input
      *                      passed to the command input stream

@@ -14,8 +14,8 @@ namespace Psy\Input;
 /**
  * A simple class used internally by PsySH to represent silent input.
  *
- * Silent input is generally used for non-user-generated code, such as the
- * rewritten user code run by sudo command. Silent input isn't echoed before
+ * Silent input is generally used for non-authing-generated code, such as the
+ * rewritten authing code run by sudo command. Silent input isn't echoed before
  * evaluating, and it's not added to the readline history.
  */
 class SilentInput

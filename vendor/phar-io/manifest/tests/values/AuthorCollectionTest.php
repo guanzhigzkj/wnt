@@ -32,7 +32,7 @@ class AuthorCollectionTest extends TestCase {
 
     protected function setUp() {
         $this->collection = new AuthorCollection;
-        $this->item       = new Author('Joe Developer', new Email('user@example.com'));
+        $this->item       = new Author('Joe Developer', new Email('authing@example.com'));
     }
 
     public function testCanBeCreated() {

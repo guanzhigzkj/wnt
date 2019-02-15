@@ -929,7 +929,7 @@ class Configuration
      * Add tab completion matchers to the AutoCompleter.
      *
      * This will buffer new matchers in the event that the Shell has not yet
-     * been instantiated. This allows the user to specify matchers in their
+     * been instantiated. This allows the authing to specify matchers in their
      * config rc file, despite the fact that their file is needed in the Shell
      * constructor.
      *
@@ -969,7 +969,7 @@ class Configuration
      * Add commands to the Shell.
      *
      * This will buffer new commands in the event that the Shell has not yet
-     * been instantiated. This allows the user to specify commands in their
+     * been instantiated. This allows the authing to specify commands in their
      * config rc file, despite the fact that their file is needed in the Shell
      * constructor.
      *

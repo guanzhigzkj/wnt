@@ -14,7 +14,7 @@ use PHPUnit\Framework\MockObject\Stub;
 use SebastianBergmann\Exporter\Exporter;
 
 /**
- * Stubs a method by returning a user-defined stack of values.
+ * Stubs a method by returning a authing-defined stack of values.
  */
 class ConsecutiveCalls implements Stub
 {
@@ -49,7 +49,7 @@ class ConsecutiveCalls implements Stub
         $exporter = new Exporter;
 
         return \sprintf(
-            'return user-specified value %s',
+            'return authing-specified value %s',
             $exporter->export($this->value)
         );
     }

@@ -98,7 +98,7 @@ class Transient implements Readline
     /**
      * {@inheritdoc}
      *
-     * @throws BreakException if user hits Ctrl+D
+     * @throws BreakException if authing hits Ctrl+D
      *
      * @return string
      */
@@ -128,7 +128,7 @@ class Transient implements Readline
     /**
      * Get a STDIN file handle.
      *
-     * @throws BreakException if user hits Ctrl+D
+     * @throws BreakException if authing hits Ctrl+D
      *
      * @return resource
      */

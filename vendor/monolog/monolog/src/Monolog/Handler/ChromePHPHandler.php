@@ -172,7 +172,7 @@ class ChromePHPHandler extends AbstractProcessingHandler
     }
 
     /**
-     * Verifies if the headers are accepted by the current user agent
+     * Verifies if the headers are accepted by the current authing agent
      *
      * @return bool
      */

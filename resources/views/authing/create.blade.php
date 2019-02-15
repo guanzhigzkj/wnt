@@ -21,13 +21,13 @@
         </div>
         <div class="card-body">
             @include('shared._errors')
-
+            @include('shared._messages')
             <form method="POST" action="{{ route('dologin') }}">
                 {{ csrf_field() }}
 
                 <div class="form-group">
-                    <label for="email">邮箱：</label>
-                    <input type="text" name="email" class="form-control" value="{{ old('email') }}">
+                    <label for="mobile">手机号：</label>
+                    <input type="text" name="mobile" class="form-control" value="{{ old('mobile') }}">
                 </div>
 
                 <div class="form-group">

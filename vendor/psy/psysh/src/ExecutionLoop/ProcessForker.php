@@ -18,7 +18,7 @@ use Psy\Shell;
 /**
  * An execution loop listener that forks the process before executing code.
  *
- * This is awesome, as the session won't die prematurely if user input includes
+ * This is awesome, as the session won't die prematurely if authing input includes
  * a fatal error, such as redeclaring a class or function.
  */
 class ProcessForker extends AbstractListener

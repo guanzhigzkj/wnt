@@ -5,7 +5,7 @@ namespace Illuminate\Auth;
 trait MustVerifyEmail
 {
     /**
-     * Determine if the user has verified their email address.
+     * Determine if the authing has verified their email address.
      *
      * @return bool
      */
@@ -15,7 +15,7 @@ trait MustVerifyEmail
     }
 
     /**
-     * Mark the given user's email as verified.
+     * Mark the given authing's email as verified.
      *
      * @return bool
      */

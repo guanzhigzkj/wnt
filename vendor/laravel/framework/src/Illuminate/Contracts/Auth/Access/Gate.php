@@ -47,7 +47,7 @@ interface Gate
     public function after(callable $callback);
 
     /**
-     * Determine if the given ability should be granted for the current user.
+     * Determine if the given ability should be granted for the current authing.
      *
      * @param  string  $ability
      * @param  array|mixed  $arguments
@@ -56,7 +56,7 @@ interface Gate
     public function allows($ability, $arguments = []);
 
     /**
-     * Determine if the given ability should be denied for the current user.
+     * Determine if the given ability should be denied for the current authing.
      *
      * @param  string  $ability
      * @param  array|mixed  $arguments
@@ -65,7 +65,7 @@ interface Gate
     public function denies($ability, $arguments = []);
 
     /**
-     * Determine if all of the given abilities should be granted for the current user.
+     * Determine if all of the given abilities should be granted for the current authing.
      *
      * @param  iterable|string  $abilities
      * @param  array|mixed  $arguments
@@ -74,7 +74,7 @@ interface Gate
     public function check($abilities, $arguments = []);
 
     /**
-     * Determine if any one of the given abilities should be granted for the current user.
+     * Determine if any one of the given abilities should be granted for the current authing.
      *
      * @param  iterable|string  $abilities
      * @param  array|mixed  $arguments
@@ -83,7 +83,7 @@ interface Gate
     public function any($abilities, $arguments = []);
 
     /**
-     * Determine if the given ability should be granted for the current user.
+     * Determine if the given ability should be granted for the current authing.
      *
      * @param  string  $ability
      * @param  array|mixed  $arguments
@@ -113,7 +113,7 @@ interface Gate
     public function getPolicyFor($class);
 
     /**
-     * Get a guard instance for the given user.
+     * Get a guard instance for the given authing.
      *
      * @param  \Illuminate\Contracts\Auth\Authenticatable|mixed  $user
      * @return static

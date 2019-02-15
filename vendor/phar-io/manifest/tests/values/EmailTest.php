@@ -17,11 +17,11 @@ use PHPUnit\Framework\TestCase;
  */
 class EmailTest extends TestCase {
     public function testCanBeCreatedForValidEmail() {
-        $this->assertInstanceOf(Email::class, new Email('user@example.com'));
+        $this->assertInstanceOf(Email::class, new Email('authing@example.com'));
     }
 
     public function testCanBeUsedAsString() {
-        $this->assertEquals('user@example.com', new Email('user@example.com'));
+        $this->assertEquals('authing@example.com', new Email('authing@example.com'));
     }
 
     /**

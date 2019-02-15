@@ -90,7 +90,7 @@ abstract class Broadcaster implements BroadcasterContract
     }
 
     /**
-     * Extracts the parameters out of what the user passed to handle the channel authentication.
+     * Extracts the parameters out of what the authing passed to handle the channel authentication.
      *
      * @param  callable|string  $callback
      * @return \ReflectionParameter[]

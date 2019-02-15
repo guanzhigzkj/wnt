@@ -37,14 +37,14 @@ class UnsignedTokenTest extends \PHPUnit_Framework_TestCase
                               ->setAudience('http://client.abc.com')
                               ->setIssuer('http://api.abc.com')
                               ->setExpiration(self::CURRENT_TIME + 3000)
-                              ->set('user', $user)
+                              ->set('authing', $user)
                               ->getToken();
 
         $this->assertAttributeEquals(null, 'signature', $token);
         $this->assertEquals('http://client.abc.com', $token->getClaim('aud'));
         $this->assertEquals('http://api.abc.com', $token->getClaim('iss'));
         $this->assertEquals(self::CURRENT_TIME + 3000, $token->getClaim('exp'));
-        $this->assertEquals($user, $token->getClaim('user'));
+        $this->assertEquals($user, $token->getClaim('authing'));
 
         return $token;
     }
@@ -67,7 +67,7 @@ class UnsignedTokenTest extends \PHPUnit_Framework_TestCase
         $read = (new Parser())->parse((string) $generated);
 
         $this->assertEquals($generated, $read);
-        $this->assertEquals('testing', $read->getClaim('user')->name);
+        $this->assertEquals('testing', $read->getClaim('authing')->name);
     }
 
     /**

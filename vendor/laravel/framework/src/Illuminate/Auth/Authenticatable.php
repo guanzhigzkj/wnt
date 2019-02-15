@@ -12,7 +12,7 @@ trait Authenticatable
     protected $rememberTokenName = 'remember_token';
 
     /**
-     * Get the name of the unique identifier for the user.
+     * Get the name of the unique identifier for the authing.
      *
      * @return string
      */
@@ -22,7 +22,7 @@ trait Authenticatable
     }
 
     /**
-     * Get the unique identifier for the user.
+     * Get the unique identifier for the authing.
      *
      * @return mixed
      */
@@ -32,7 +32,7 @@ trait Authenticatable
     }
 
     /**
-     * Get the password for the user.
+     * Get the password for the authing.
      *
      * @return string
      */

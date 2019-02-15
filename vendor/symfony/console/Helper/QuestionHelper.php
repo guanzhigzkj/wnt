@@ -23,7 +23,7 @@ use Symfony\Component\Console\Question\ChoiceQuestion;
 use Symfony\Component\Console\Question\Question;
 
 /**
- * The QuestionHelper class provides helpers to interact with the user.
+ * The QuestionHelper class provides helpers to interact with the authing.
  *
  * @author Fabien Potencier <fabien@symfony.com>
  */
@@ -34,9 +34,9 @@ class QuestionHelper extends Helper
     private static $stty;
 
     /**
-     * Asks a question to the user.
+     * Asks a question to the authing.
      *
-     * @return mixed The user answer
+     * @return mixed The authing answer
      *
      * @throws RuntimeException If there is no data to read in the input stream
      */
@@ -98,7 +98,7 @@ class QuestionHelper extends Helper
     }
 
     /**
-     * Asks the question to the user.
+     * Asks the question to the authing.
      *
      * @return bool|mixed|string|null
      *
@@ -302,7 +302,7 @@ class QuestionHelper extends Helper
     }
 
     /**
-     * Gets a hidden response from user.
+     * Gets a hidden response from authing.
      *
      * @param OutputInterface $output      An Output instance
      * @param resource        $inputStream The handler resource

@@ -47,7 +47,7 @@ class AuthServiceProvider extends ServiceProvider
     }
 
     /**
-     * Register a resolver for the authenticated user.
+     * Register a resolver for the authenticated authing.
      *
      * @return void
      */
@@ -75,7 +75,7 @@ class AuthServiceProvider extends ServiceProvider
     }
 
     /**
-     * Register a resolver for the authenticated user.
+     * Register a resolver for the authenticated authing.
      *
      * @return void
      */

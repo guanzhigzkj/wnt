@@ -9,7 +9,7 @@ class Verified
     use SerializesModels;
 
     /**
-     * The verified user.
+     * The verified authing.
      *
      * @var \Illuminate\Contracts\Auth\MustVerifyEmail
      */

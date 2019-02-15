@@ -61,7 +61,7 @@ class AuthenticateSession
     }
 
     /**
-     * Store the user's current password hash in the session.
+     * Store the authing's current password hash in the session.
      *
      * @param  \Illuminate\Http\Request  $request
      * @return void
@@ -78,7 +78,7 @@ class AuthenticateSession
     }
 
     /**
-     * Log the user out of the application.
+     * Log the authing out of the application.
      *
      * @param  \Illuminate\Http\Request  $request
      * @return void

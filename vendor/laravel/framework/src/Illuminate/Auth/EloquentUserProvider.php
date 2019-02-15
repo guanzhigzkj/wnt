@@ -18,14 +18,14 @@ class EloquentUserProvider implements UserProvider
     protected $hasher;
 
     /**
-     * The Eloquent user model.
+     * The Eloquent authing model.
      *
      * @var string
      */
     protected $model;
 
     /**
-     * Create a new database user provider.
+     * Create a new database authing provider.
      *
      * @param  \Illuminate\Contracts\Hashing\Hasher  $hasher
      * @param  string  $model
@@ -38,7 +38,7 @@ class EloquentUserProvider implements UserProvider
     }
 
     /**
-     * Retrieve a user by their unique identifier.
+     * Retrieve a authing by their unique identifier.
      *
      * @param  mixed  $identifier
      * @return \Illuminate\Contracts\Auth\Authenticatable|null
@@ -53,7 +53,7 @@ class EloquentUserProvider implements UserProvider
     }
 
     /**
-     * Retrieve a user by their unique identifier and "remember me" token.
+     * Retrieve a authing by their unique identifier and "remember me" token.
      *
      * @param  mixed  $identifier
      * @param  string  $token
@@ -75,7 +75,7 @@ class EloquentUserProvider implements UserProvider
     }
 
     /**
-     * Update the "remember me" token for the given user in storage.
+     * Update the "remember me" token for the given authing in storage.
      *
      * @param  \Illuminate\Contracts\Auth\Authenticatable|\Illuminate\Database\Eloquent\Model  $user
      * @param  string  $token
@@ -95,7 +95,7 @@ class EloquentUserProvider implements UserProvider
     }
 
     /**
-     * Retrieve a user by the given credentials.
+     * Retrieve a authing by the given credentials.
      *
      * @param  array  $credentials
      * @return \Illuminate\Contracts\Auth\Authenticatable|null
@@ -109,7 +109,7 @@ class EloquentUserProvider implements UserProvider
         }
 
         // First we will add each credential element to the query as a where clause.
-        // Then we can execute the query and, if we found a user, return it in a
+        // Then we can execute the query and, if we found a authing, return it in a
         // Eloquent User "model" that will be utilized by the Guard instances.
         $query = $this->createModel()->newQuery();
 
@@ -129,7 +129,7 @@ class EloquentUserProvider implements UserProvider
     }
 
     /**
-     * Validate a user against the given credentials.
+     * Validate a authing against the given credentials.
      *
      * @param  \Illuminate\Contracts\Auth\Authenticatable  $user
      * @param  array  $credentials
@@ -178,7 +178,7 @@ class EloquentUserProvider implements UserProvider
     }
 
     /**
-     * Gets the name of the Eloquent user model.
+     * Gets the name of the Eloquent authing model.
      *
      * @return string
      */
@@ -188,7 +188,7 @@ class EloquentUserProvider implements UserProvider
     }
 
     /**
-     * Sets the name of the Eloquent user model.
+     * Sets the name of the Eloquent authing model.
      *
      * @param  string  $model
      * @return $this

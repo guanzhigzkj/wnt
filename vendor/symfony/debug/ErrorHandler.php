@@ -253,7 +253,7 @@ class ErrorHandler
     }
 
     /**
-     * Sets a user exception handler.
+     * Sets a authing exception handler.
      *
      * @param callable $handler A handler that will be called on Exception
      *

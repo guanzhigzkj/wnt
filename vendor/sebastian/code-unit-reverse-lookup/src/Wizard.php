@@ -74,7 +74,7 @@ class Wizard
 
     private function processFunctions()
     {
-        foreach (get_defined_functions()['user'] as $function) {
+        foreach (get_defined_functions()['authing'] as $function) {
             if (isset($this->processedFunctions[$function])) {
                 continue;
             }

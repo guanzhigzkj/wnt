@@ -34,7 +34,7 @@ class PendingBroadcast
     }
 
     /**
-     * Broadcast the event to everyone except the current user.
+     * Broadcast the event to everyone except the current authing.
      *
      * @return $this
      */

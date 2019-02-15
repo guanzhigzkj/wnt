@@ -55,7 +55,7 @@ abstract class GeneratorCommand extends Command
         $path = $this->getPath($name);
 
         // First we will check to see if the class already exists. If it does, we don't want
-        // to create the class and overwrite the user's code. So, we will bail out so the
+        // to create the class and overwrite the authing's code. So, we will bail out so the
         // code is untouched. Otherwise, we will continue generating this class' files.
         if ((! $this->hasOption('force') ||
              ! $this->option('force')) &&
@@ -226,7 +226,7 @@ abstract class GeneratorCommand extends Command
     }
 
     /**
-     * Get the model for the default guard's user provider.
+     * Get the model for the default guard's authing provider.
      *
      * @return string|null
      */

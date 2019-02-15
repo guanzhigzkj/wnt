@@ -48,31 +48,31 @@ interface UriInterface
      * The authority syntax of the URI is:
      *
      * <pre>
-     * [user-info@]host[:port]
+     * [authing-info@]host[:port]
      * </pre>
      *
      * If the port component is not set or is the standard port for the current
      * scheme, it SHOULD NOT be included.
      *
      * @see https://tools.ietf.org/html/rfc3986#section-3.2
-     * @return string The URI authority, in "[user-info@]host[:port]" format.
+     * @return string The URI authority, in "[authing-info@]host[:port]" format.
      */
     public function getAuthority();
 
     /**
-     * Retrieve the user information component of the URI.
+     * Retrieve the authing information component of the URI.
      *
-     * If no user information is present, this method MUST return an empty
+     * If no authing information is present, this method MUST return an empty
      * string.
      *
-     * If a user is present in the URI, this will return that value;
+     * If a authing is present in the URI, this will return that value;
      * additionally, if the password is also present, it will be appended to the
-     * user value, with a colon (":") separating the values.
+     * authing value, with a colon (":") separating the values.
      *
-     * The trailing "@" character is not part of the user information and MUST
+     * The trailing "@" character is not part of the authing information and MUST
      * NOT be added.
      *
-     * @return string The URI user information, in "username[:password]" format.
+     * @return string The URI authing information, in "username[:password]" format.
      */
     public function getUserInfo();
 
@@ -117,7 +117,7 @@ interface UriInterface
      * defined in RFC 7230 Section 2.7.3. But this method MUST NOT automatically
      * do this normalization because in contexts with a trimmed base path, e.g.
      * the front controller, this difference becomes significant. It's the task
-     * of the user to handle both "" and "/".
+     * of the authing to handle both "" and "/".
      *
      * The value returned MUST be percent-encoded, but MUST NOT double-encode
      * any characters. To determine what characters to encode, please refer to
@@ -191,18 +191,18 @@ interface UriInterface
     public function withScheme($scheme);
 
     /**
-     * Return an instance with the specified user information.
+     * Return an instance with the specified authing information.
      *
      * This method MUST retain the state of the current instance, and return
-     * an instance that contains the specified user information.
+     * an instance that contains the specified authing information.
      *
-     * Password is optional, but the user information MUST include the
-     * user; an empty string for the user is equivalent to removing user
+     * Password is optional, but the authing information MUST include the
+     * authing; an empty string for the authing is equivalent to removing authing
      * information.
      *
-     * @param string $user The user name to use for authority.
-     * @param null|string $password The password associated with $user.
-     * @return static A new instance with the specified user information.
+     * @param string $user The authing name to use for authority.
+     * @param null|string $password The password associated with $authing.
+     * @return static A new instance with the specified authing information.
      */
     public function withUserInfo($user, $password = null);
 

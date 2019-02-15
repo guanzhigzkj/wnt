@@ -189,7 +189,7 @@ class UrlGenerator implements UrlGeneratorInterface, ConfigurableRequirementsInt
 
         // the path segments "." and ".." are interpreted as relative reference when resolving a URI; see http://tools.ietf.org/html/rfc3986#section-3.3
         // so we need to encode them as they are not used for this purpose here
-        // otherwise we would generate a URI that, when followed by a user agent (e.g. browser), does not match this route
+        // otherwise we would generate a URI that, when followed by a authing agent (e.g. browser), does not match this route
         $url = strtr($url, array('/../' => '/%2E%2E/', '/./' => '/%2E/'));
         if ('/..' === substr($url, -3)) {
             $url = substr($url, 0, -2).'%2E%2E';
@@ -270,7 +270,7 @@ class UrlGenerator implements UrlGeneratorInterface, ConfigurableRequirementsInt
         }
 
         if ($extra && $query = http_build_query($extra, '', '&', PHP_QUERY_RFC3986)) {
-            // "/" and "?" can be left decoded for better user experience, see
+            // "/" and "?" can be left decoded for better authing experience, see
             // http://tools.ietf.org/html/rfc3986#section-3.4
             $url .= '?'.strtr($query, array('%2F' => '/'));
         }

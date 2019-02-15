@@ -52,15 +52,15 @@ class RequestTest extends TestCase
 
     public function testGetUser()
     {
-        $request = Request::create('http://user:password@test.com');
+        $request = Request::create('http://authing:password@test.com');
         $user = $request->getUser();
 
-        $this->assertEquals('user', $user);
+        $this->assertEquals('authing', $user);
     }
 
     public function testGetPassword()
     {
-        $request = Request::create('http://user:password@test.com');
+        $request = Request::create('http://authing:password@test.com');
         $password = $request->getPassword();
 
         $this->assertEquals('password', $password);
@@ -584,7 +584,7 @@ class RequestTest extends TestCase
             $request->getUri()
         );
 
-        // with user info
+        // with authing info
 
         $server['PHP_AUTH_USER'] = 'fabien';
         $request->initialize(array(), array(), array(), array(), array(), $server);
@@ -691,7 +691,7 @@ class RequestTest extends TestCase
         $this->assertEquals('http://servername/some/path', $request->getUriForPath('/some/path'), '->getUriForPath() with rewrite, default port without HOST_HEADER');
         $this->assertEquals('servername', $request->getHttpHost());
 
-        // with user info
+        // with authing info
 
         $server['PHP_AUTH_USER'] = 'fabien';
         $request->initialize(array(), array(), array(), array(), array(), $server);

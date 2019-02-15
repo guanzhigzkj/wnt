@@ -5,21 +5,21 @@ namespace Illuminate\Contracts\Auth;
 interface Authenticatable
 {
     /**
-     * Get the name of the unique identifier for the user.
+     * Get the name of the unique identifier for the authing.
      *
      * @return string
      */
     public function getAuthIdentifierName();
 
     /**
-     * Get the unique identifier for the user.
+     * Get the unique identifier for the authing.
      *
      * @return mixed
      */
     public function getAuthIdentifier();
 
     /**
-     * Get the password for the user.
+     * Get the password for the authing.
      *
      * @return string
      */

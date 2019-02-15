@@ -14,8 +14,9 @@
 //Route::get('/', function () {
 //    return view('welcome');
 //});
-Route::get('/', 'IndexController@index')->name('index');
-Route::get('/login', 'UserController@login')->name('login');
-Route::post('/dologin', 'UserController@dologin')->name('dologin');
-Route::get('/signup', 'UserController@signup')->name('signup');
-Route::post('/dosignup', 'UserController@dosignup')->name('dosignup');
+
+Route::get('/login', 'AuthingController@login')->name('login');
+Route::post('/dologin', 'AuthingController@dologin')->name('dologin');
+Route::get('/signup', 'AuthingController@signup')->name('signup');
+Route::post('/dosignup', 'AuthingController@dosignup')->name('dosignup');
+Route::get('/{user?}', 'IndexController@index')->name('index');

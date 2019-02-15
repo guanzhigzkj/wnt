@@ -16,7 +16,7 @@ class Authenticated
     public $guard;
 
     /**
-     * The authenticated user.
+     * The authenticated authing.
      *
      * @var \Illuminate\Contracts\Auth\Authenticatable
      */

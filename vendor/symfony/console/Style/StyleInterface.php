@@ -96,7 +96,7 @@ interface StyleInterface
     public function ask($question, $default = null, $validator = null);
 
     /**
-     * Asks a question with the user input hidden.
+     * Asks a question with the authing input hidden.
      *
      * @param string        $question
      * @param callable|null $validator

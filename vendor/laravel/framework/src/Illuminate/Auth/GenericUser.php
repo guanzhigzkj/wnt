@@ -7,7 +7,7 @@ use Illuminate\Contracts\Auth\Authenticatable as UserContract;
 class GenericUser implements UserContract
 {
     /**
-     * All of the user's attributes.
+     * All of the authing's attributes.
      *
      * @var array
      */
@@ -25,7 +25,7 @@ class GenericUser implements UserContract
     }
 
     /**
-     * Get the name of the unique identifier for the user.
+     * Get the name of the unique identifier for the authing.
      *
      * @return string
      */
@@ -35,7 +35,7 @@ class GenericUser implements UserContract
     }
 
     /**
-     * Get the unique identifier for the user.
+     * Get the unique identifier for the authing.
      *
      * @return mixed
      */
@@ -47,7 +47,7 @@ class GenericUser implements UserContract
     }
 
     /**
-     * Get the password for the user.
+     * Get the password for the authing.
      *
      * @return string
      */
@@ -88,7 +88,7 @@ class GenericUser implements UserContract
     }
 
     /**
-     * Dynamically access the user's attributes.
+     * Dynamically access the authing's attributes.
      *
      * @param  string  $key
      * @return mixed
@@ -99,7 +99,7 @@ class GenericUser implements UserContract
     }
 
     /**
-     * Dynamically set an attribute on the user.
+     * Dynamically set an attribute on the authing.
      *
      * @param  string  $key
      * @param  mixed  $value
@@ -111,7 +111,7 @@ class GenericUser implements UserContract
     }
 
     /**
-     * Dynamically check if a value is set on the user.
+     * Dynamically check if a value is set on the authing.
      *
      * @param  string  $key
      * @return bool
@@ -122,7 +122,7 @@ class GenericUser implements UserContract
     }
 
     /**
-     * Dynamically unset a value on the user.
+     * Dynamically unset a value on the authing.
      *
      * @param  string  $key
      * @return void

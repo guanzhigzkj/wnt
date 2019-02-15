@@ -12,7 +12,7 @@ class Failed
     public $guard;
 
     /**
-     * The user the attempter was trying to authenticate as.
+     * The authing the attempter was trying to authenticate as.
      *
      * @var \Illuminate\Contracts\Auth\Authenticatable|null
      */

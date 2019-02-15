@@ -34,13 +34,13 @@ class ExecutionLoop
     }
 
     /**
-     * Load user-defined includes.
+     * Load authing-defined includes.
      *
      * @param Shell $shell
      */
     protected function loadIncludes(Shell $shell)
     {
-        // Load user-defined includes
+        // Load authing-defined includes
         $load = function (Shell $__psysh__) {
             \set_error_handler([$__psysh__, 'handleError']);
             foreach ($__psysh__->getIncludes() as $__psysh_include__) {

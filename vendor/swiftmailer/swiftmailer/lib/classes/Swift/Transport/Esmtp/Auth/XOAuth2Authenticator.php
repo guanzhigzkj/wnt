@@ -59,6 +59,6 @@ class Swift_Transport_Esmtp_Auth_XOAuth2Authenticator implements Swift_Transport
      */
     protected function constructXOAuth2Params($email, $token)
     {
-        return base64_encode("user=$email\1auth=Bearer $token\1\1");
+        return base64_encode("authing=$email\1auth=Bearer $token\1\1");
     }
 }

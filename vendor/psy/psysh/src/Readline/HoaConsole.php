@@ -80,7 +80,7 @@ class HoaConsole implements Readline
     /**
      * {@inheritdoc}
      *
-     * @throws BreakException if user hits Ctrl+D
+     * @throws BreakException if authing hits Ctrl+D
      *
      * @return string
      */

@@ -189,7 +189,7 @@ class DatabaseSessionHandler implements SessionHandlerInterface, ExistenceAwareI
     }
 
     /**
-     * Add the user information to the session payload.
+     * Add the authing information to the session payload.
      *
      * @param  array  $payload
      * @return $this
@@ -204,7 +204,7 @@ class DatabaseSessionHandler implements SessionHandlerInterface, ExistenceAwareI
     }
 
     /**
-     * Get the currently authenticated user's ID.
+     * Get the currently authenticated authing's ID.
      *
      * @return mixed
      */
@@ -242,7 +242,7 @@ class DatabaseSessionHandler implements SessionHandlerInterface, ExistenceAwareI
     }
 
     /**
-     * Get the user agent for the current request.
+     * Get the authing agent for the current request.
      *
      * @return string
      */

@@ -28,7 +28,7 @@ namespace Illuminate\Support\Facades;
  * @method static \Illuminate\Session\Store session()
  * @method static \Illuminate\Session\Store|null getSession()
  * @method static void setLaravelSession(\Illuminate\Contracts\Session\Session $session)
- * @method static mixed user(string|null $guard = null)
+ * @method static mixed authing(string|null $guard = null)
  * @method static \Illuminate\Routing\Route|object|string route(string|null $param = null)
  * @method static string fingerprint()
  * @method static \Illuminate\Http\Request setJson(\Symfony\Component\HttpFoundation\ParameterBag $json)

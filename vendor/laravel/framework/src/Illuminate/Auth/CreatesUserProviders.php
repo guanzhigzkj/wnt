@@ -14,7 +14,7 @@ trait CreatesUserProviders
     protected $customProviderCreators = [];
 
     /**
-     * Create the user provider implementation for the driver.
+     * Create the authing provider implementation for the driver.
      *
      * @param  string|null  $provider
      * @return \Illuminate\Contracts\Auth\UserProvider|null
@@ -40,13 +40,13 @@ trait CreatesUserProviders
                 return $this->createEloquentProvider($config);
             default:
                 throw new InvalidArgumentException(
-                    "Authentication user provider [{$driver}] is not defined."
+                    "Authentication authing provider [{$driver}] is not defined."
                 );
         }
     }
 
     /**
-     * Get the user provider configuration.
+     * Get the authing provider configuration.
      *
      * @param  string|null  $provider
      * @return array|null
@@ -59,7 +59,7 @@ trait CreatesUserProviders
     }
 
     /**
-     * Create an instance of the database user provider.
+     * Create an instance of the database authing provider.
      *
      * @param  array  $config
      * @return \Illuminate\Auth\DatabaseUserProvider
@@ -72,7 +72,7 @@ trait CreatesUserProviders
     }
 
     /**
-     * Create an instance of the Eloquent user provider.
+     * Create an instance of the Eloquent authing provider.
      *
      * @param  array  $config
      * @return \Illuminate\Auth\EloquentUserProvider
@@ -83,7 +83,7 @@ trait CreatesUserProviders
     }
 
     /**
-     * Get the default user provider name.
+     * Get the default authing provider name.
      *
      * @return string
      */

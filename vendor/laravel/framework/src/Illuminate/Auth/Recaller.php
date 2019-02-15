@@ -25,7 +25,7 @@ class Recaller
     }
 
     /**
-     * Get the user ID from the recaller.
+     * Get the authing ID from the recaller.
      *
      * @return string
      */

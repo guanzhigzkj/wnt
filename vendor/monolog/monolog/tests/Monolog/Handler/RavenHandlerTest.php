@@ -118,20 +118,20 @@ class RavenHandlerTest extends TestCase
         $ravenClient = $this->getRavenClient();
         $handler = $this->getHandler($ravenClient);
 
-        $recordWithNoContext = $this->getRecord(Logger::INFO, 'test with default user context');
-        // set user context 'externally'
+        $recordWithNoContext = $this->getRecord(Logger::INFO, 'test with default authing context');
+        // set authing context 'externally'
 
         $user = array(
             'id' => '123',
             'email' => 'test@test.com',
         );
 
-        $recordWithContext = $this->getRecord(Logger::INFO, 'test', array('user' => $user));
+        $recordWithContext = $this->getRecord(Logger::INFO, 'test', array('authing' => $user));
 
         $ravenClient->user_context(array('id' => 'test_user_id'));
         // handle context
         $handler->handle($recordWithContext);
-        $this->assertEquals($user, $ravenClient->lastData['user']);
+        $this->assertEquals($user, $ravenClient->lastData['authing']);
 
         // check to see if its reset
         $handler->handle($recordWithNoContext);
@@ -141,7 +141,7 @@ class RavenHandlerTest extends TestCase
         // handle with null context
         $ravenClient->user_context(null);
         $handler->handle($recordWithContext);
-        $this->assertEquals($user, $ravenClient->lastData['user']);
+        $this->assertEquals($user, $ravenClient->lastData['authing']);
 
         // check to see if its reset
         $handler->handle($recordWithNoContext);

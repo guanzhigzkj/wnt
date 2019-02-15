@@ -38,7 +38,7 @@ class Verification implements VerificationInterface, \ArrayAccess, \Serializable
      * Create a verification with a number and brand, or the `request_id` of an existing verification.
      *
      * @param string $idOrNumber The number to verify, or the `request_id` of an existing verification.
-     * @param null|string $brand The brand that identifies your application to the user.
+     * @param null|string $brand The brand that identifies your application to the authing.
      * @param array $additional Additional parameters can be set as keys / values.
      */
     public function __construct($idOrNumber, $brand = null, $additional = [])
@@ -82,7 +82,7 @@ class Verification implements VerificationInterface, \ArrayAccess, \Serializable
      * Check if the code is correct. Unlike the method it proxies, an invalid code does not throw an exception.
      *
      * @uses \Nexmo\Verify\Client::check()
-     * @param string $code Numeric code provided by the user.
+     * @param string $code Numeric code provided by the authing.
      * @param null|string $ip IP address to be used for the verification.
      * @return bool Code is valid.
      * @throws RequestException
@@ -132,7 +132,7 @@ class Verification implements VerificationInterface, \ArrayAccess, \Serializable
     }
 
     /**
-     * Check if the user provided data has sent to the API yet.
+     * Check if the authing provided data has sent to the API yet.
      *
      * @return bool
      */
@@ -467,7 +467,7 @@ class Verification implements VerificationInterface, \ArrayAccess, \Serializable
     }
 
     /**
-     * Simply proxies array access to check for a parameter in the response, request, or user provided data.
+     * Simply proxies array access to check for a parameter in the response, request, or authing provided data.
      *
      * @uses \Nexmo\Verify\Verification::offsetGet();
      * @uses \Nexmo\Verify\Verification::offsetExists();
@@ -483,7 +483,7 @@ class Verification implements VerificationInterface, \ArrayAccess, \Serializable
     }
 
     /**
-     * Allow the object to access the data from the API response, a sent API request, or the user set data that the
+     * Allow the object to access the data from the API response, a sent API request, or the authing set data that the
      * request will be created from - in that order.
      *
      * @param mixed $offset
@@ -499,7 +499,7 @@ class Verification implements VerificationInterface, \ArrayAccess, \Serializable
     }
 
     /**
-     * Allow the object to access the data from the API response, a sent API request, or the user set data that the
+     * Allow the object to access the data from the API response, a sent API request, or the authing set data that the
      * request will be created from - in that order.
      *
      * @param mixed $offset

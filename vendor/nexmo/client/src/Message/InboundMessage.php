@@ -148,7 +148,7 @@ class InboundMessage implements MessageInterface, \ArrayAccess
     }
 
     /**
-     * Allow the object to access the data from the API response, a sent API request, or the user set data that the
+     * Allow the object to access the data from the API response, a sent API request, or the authing set data that the
      * request will be created from - in that order.
      *
      * @param mixed $offset
@@ -169,7 +169,7 @@ class InboundMessage implements MessageInterface, \ArrayAccess
     }
 
     /**
-     * Allow the object to access the data from the API response, a sent API request, or the user set data that the
+     * Allow the object to access the data from the API response, a sent API request, or the authing set data that the
      * request will be created from - in that order.
      *
      * @param mixed $offset

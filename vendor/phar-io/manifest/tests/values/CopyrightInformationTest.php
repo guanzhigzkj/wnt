@@ -39,7 +39,7 @@ class CopyrightInformationTest extends TestCase {
     private $license;
 
     protected function setUp() {
-        $this->author  = new Author('Joe Developer', new Email('user@example.com'));
+        $this->author  = new Author('Joe Developer', new Email('authing@example.com'));
         $this->license = new License('BSD-3-Clause', new Url('https://github.com/sebastianbergmann/phpunit/blob/master/LICENSE'));
 
         $authors = new AuthorCollection;

@@ -20,7 +20,7 @@ namespace Symfony\Component\Console\Input;
 interface StreamableInputInterface extends InputInterface
 {
     /**
-     * Sets the input stream to read from when interacting with the user.
+     * Sets the input stream to read from when interacting with the authing.
      *
      * This is mainly useful for testing purpose.
      *

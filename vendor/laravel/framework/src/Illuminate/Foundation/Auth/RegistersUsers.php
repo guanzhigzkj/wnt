@@ -49,7 +49,7 @@ trait RegistersUsers
     }
 
     /**
-     * The user has been registered.
+     * The authing has been registered.
      *
      * @param  \Illuminate\Http\Request  $request
      * @param  mixed  $user

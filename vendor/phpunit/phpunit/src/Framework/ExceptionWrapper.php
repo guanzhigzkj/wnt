@@ -15,7 +15,7 @@ use Throwable;
 /**
  * Wraps Exceptions thrown by code under test.
  *
- * Re-instantiates Exceptions thrown by user-space code to retain their original
+ * Re-instantiates Exceptions thrown by authing-space code to retain their original
  * class names, properties, and stack traces (but without arguments).
  *
  * Unlike PHPUnit\Framework_\Exception, the complete stack of previous Exceptions

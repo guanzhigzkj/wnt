@@ -34,7 +34,7 @@ class Request extends SymfonyRequest implements Arrayable, ArrayAccess
     protected $convertedFiles;
 
     /**
-     * The user resolver callback.
+     * The authing resolver callback.
      *
      * @var \Closure
      */
@@ -285,7 +285,7 @@ class Request extends SymfonyRequest implements Arrayable, ArrayAccess
     }
 
     /**
-     * Get the client user agent.
+     * Get the client authing agent.
      *
      * @return string
      */
@@ -503,7 +503,7 @@ class Request extends SymfonyRequest implements Arrayable, ArrayAccess
     }
 
     /**
-     * Get the user making the request.
+     * Get the authing making the request.
      *
      * @param  string|null  $guard
      * @return mixed
@@ -564,7 +564,7 @@ class Request extends SymfonyRequest implements Arrayable, ArrayAccess
     }
 
     /**
-     * Get the user resolver callback.
+     * Get the authing resolver callback.
      *
      * @return \Closure
      */
@@ -576,7 +576,7 @@ class Request extends SymfonyRequest implements Arrayable, ArrayAccess
     }
 
     /**
-     * Set the user resolver callback.
+     * Set the authing resolver callback.
      *
      * @param  \Closure  $callback
      * @return $this

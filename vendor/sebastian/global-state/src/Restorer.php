@@ -34,7 +34,7 @@ class Restorer
 
         $functions = \get_defined_functions();
 
-        foreach (\array_diff($functions['user'], $snapshot->functions()) as $function) {
+        foreach (\array_diff($functions['authing'], $snapshot->functions()) as $function) {
             uopz_delete($function);
         }
     }
@@ -66,7 +66,7 @@ class Restorer
     }
 
     /**
-     * Restores all static attributes in user-defined classes from this snapshot.
+     * Restores all static attributes in authing-defined classes from this snapshot.
      */
     public function restoreStaticAttributes(Snapshot $snapshot)
     {

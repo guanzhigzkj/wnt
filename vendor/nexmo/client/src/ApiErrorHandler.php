@@ -27,7 +27,7 @@ class ApiErrorHandler {
             throw new Exception\Server($errorMessage, $statusCode);
         }
 
-        // Otherwise it's a 4xx, so we may have more context for the user
+        // Otherwise it's a 4xx, so we may have more context for the authing
         // If it's a validation error, share that information
         if (isset($body['invalid_parameters'])) {
             throw new Exception\Validation($errorMessage, $statusCode, null, $body['invalid_parameters']);

@@ -24,7 +24,7 @@ trait VerifiesEmails
     }
 
     /**
-     * Mark the authenticated user's email address as verified.
+     * Mark the authenticated authing's email address as verified.
      *
      * @param  \Illuminate\Http\Request  $request
      * @return \Illuminate\Http\Response

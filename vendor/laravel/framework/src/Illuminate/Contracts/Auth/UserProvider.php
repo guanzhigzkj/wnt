@@ -5,7 +5,7 @@ namespace Illuminate\Contracts\Auth;
 interface UserProvider
 {
     /**
-     * Retrieve a user by their unique identifier.
+     * Retrieve a authing by their unique identifier.
      *
      * @param  mixed  $identifier
      * @return \Illuminate\Contracts\Auth\Authenticatable|null
@@ -13,7 +13,7 @@ interface UserProvider
     public function retrieveById($identifier);
 
     /**
-     * Retrieve a user by their unique identifier and "remember me" token.
+     * Retrieve a authing by their unique identifier and "remember me" token.
      *
      * @param  mixed   $identifier
      * @param  string  $token
@@ -22,7 +22,7 @@ interface UserProvider
     public function retrieveByToken($identifier, $token);
 
     /**
-     * Update the "remember me" token for the given user in storage.
+     * Update the "remember me" token for the given authing in storage.
      *
      * @param  \Illuminate\Contracts\Auth\Authenticatable  $user
      * @param  string  $token
@@ -31,7 +31,7 @@ interface UserProvider
     public function updateRememberToken(Authenticatable $user, $token);
 
     /**
-     * Retrieve a user by the given credentials.
+     * Retrieve a authing by the given credentials.
      *
      * @param  array  $credentials
      * @return \Illuminate\Contracts\Auth\Authenticatable|null
@@ -39,7 +39,7 @@ interface UserProvider
     public function retrieveByCredentials(array $credentials);
 
     /**
-     * Validate a user against the given credentials.
+     * Validate a authing against the given credentials.
      *
      * @param  \Illuminate\Contracts\Auth\Authenticatable  $user
      * @param  array  $credentials

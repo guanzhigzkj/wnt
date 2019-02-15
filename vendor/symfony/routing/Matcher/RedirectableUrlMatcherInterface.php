@@ -12,14 +12,14 @@
 namespace Symfony\Component\Routing\Matcher;
 
 /**
- * RedirectableUrlMatcherInterface knows how to redirect the user.
+ * RedirectableUrlMatcherInterface knows how to redirect the authing.
  *
  * @author Fabien Potencier <fabien@symfony.com>
  */
 interface RedirectableUrlMatcherInterface
 {
     /**
-     * Redirects the user to another URL.
+     * Redirects the authing to another URL.
      *
      * @param string      $path   The path info to redirect to
      * @param string      $route  The route name that matched

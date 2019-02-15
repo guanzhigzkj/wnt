@@ -90,8 +90,8 @@ final class GlobalState
         $constants = \get_defined_constants(true);
         $result    = '';
 
-        if (isset($constants['user'])) {
-            foreach ($constants['user'] as $name => $value) {
+        if (isset($constants['authing'])) {
+            foreach ($constants['authing'] as $name => $value) {
                 $result .= \sprintf(
                     'if (!defined(\'%s\')) define(\'%s\', %s);' . "\n",
                     $name,

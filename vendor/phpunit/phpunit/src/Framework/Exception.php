@@ -26,7 +26,7 @@ use PHPUnit\Util\Filter;
  * With enabled process isolation, test results are serialized in the child
  * process and unserialized in the parent process. The stack trace of Exceptions
  * may contain objects that cannot be serialized or unserialized (e.g., PDO
- * connections). Unserializing user-space objects from the child process into
+ * connections). Unserializing authing-space objects from the child process into
  * the parent would break the intended encapsulation of process isolation.
  *
  * @see http://fabien.potencier.org/article/9/php-serialization-stack-traces-and-exceptions

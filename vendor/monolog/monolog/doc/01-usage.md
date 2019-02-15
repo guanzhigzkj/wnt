@@ -129,7 +129,7 @@ record:
 ```php
 <?php
 
-$logger->addInfo('Adding a new user', array('username' => 'Seldaek'));
+$logger->addInfo('authing', array('username' => 'Seldaek'));
 ```
 
 Simple handlers (like the StreamHandler for instance) will simply format

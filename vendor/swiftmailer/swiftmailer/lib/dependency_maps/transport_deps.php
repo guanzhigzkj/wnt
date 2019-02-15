@@ -2,7 +2,7 @@
 
 Swift_DependencyContainer::getInstance()
     ->register('transport.localdomain')
-    // As SERVER_NAME can come from the user in certain configurations, check that
+    // As SERVER_NAME can come from the authing in certain configurations, check that
     // it does not contain forbidden characters (see RFC 952 and RFC 2181). Use
     // preg_replace() instead of preg_match() to prevent DoS attacks with long host names.
     ->asValue(!empty($_SERVER['SERVER_NAME']) && '' === preg_replace('/(?:^\[)?[a-zA-Z0-9-:\]_]+\.?/', '', $_SERVER['SERVER_NAME']) ? trim($_SERVER['SERVER_NAME'], '[]') : '127.0.0.1')

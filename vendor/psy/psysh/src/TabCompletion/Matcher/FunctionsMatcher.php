@@ -14,7 +14,7 @@ namespace Psy\TabCompletion\Matcher;
 /**
  * A function name tab completion Matcher.
  *
- * This matcher provides completion for all internal and user-defined functions.
+ * This matcher provides completion for all internal and authing-defined functions.
  *
  * @author Marc Garcia <markcial@gmail.com>
  */
@@ -28,7 +28,7 @@ class FunctionsMatcher extends AbstractMatcher
         $func = $this->getInput($tokens);
 
         $functions    = \get_defined_functions();
-        $allFunctions = \array_merge($functions['user'], $functions['internal']);
+        $allFunctions = \array_merge($functions['authing'], $functions['internal']);
 
         return \array_filter($allFunctions, function ($function) use ($func) {
             return AbstractMatcher::startsWith($func, $function);

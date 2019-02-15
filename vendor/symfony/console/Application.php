@@ -824,7 +824,7 @@ class Application
     }
 
     /**
-     * Configures the input and output instances based on the user arguments and options.
+     * Configures the input and output instances based on the authing arguments and options.
      */
     protected function configureIO(InputInterface $input, OutputInterface $output)
     {

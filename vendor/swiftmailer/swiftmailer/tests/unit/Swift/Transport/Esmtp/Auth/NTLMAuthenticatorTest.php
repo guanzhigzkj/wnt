@@ -41,7 +41,7 @@ class Swift_Transport_Esmtp_Auth_NTLMAuthenticatorTest extends \SwiftMailerTestC
 
     public function testLMv2Generator()
     {
-        $username = 'user';
+        $username = 'authing';
         $password = 'SecREt01';
         $domain = 'DOMAIN';
         $challenge = '0123456789abcdef';
@@ -90,7 +90,7 @@ class Swift_Transport_Esmtp_Auth_NTLMAuthenticatorTest extends \SwiftMailerTestC
         list($domain, $user) = $this->invokePrivateMethod('getDomainAndUsername', $login, [$username]);
 
         $this->assertEquals('DOMAIN', $domain, '%s: the fetched domain did not match');
-        $this->assertEquals('user', $user, '%s: the fetched user did not match');
+        $this->assertEquals('authing', $user, '%s: the fetched authing did not match');
     }
 
     public function testGetDomainAndUsernameWithExtension()
@@ -101,40 +101,40 @@ class Swift_Transport_Esmtp_Auth_NTLMAuthenticatorTest extends \SwiftMailerTestC
         list($domain, $user) = $this->invokePrivateMethod('getDomainAndUsername', $login, [$username]);
 
         $this->assertEquals('domain.com', $domain, '%s: the fetched domain did not match');
-        $this->assertEquals('user', $user, '%s: the fetched user did not match');
+        $this->assertEquals('authing', $user, '%s: the fetched authing did not match');
     }
 
     public function testGetDomainAndUsernameWithAtSymbol()
     {
-        $username = 'user@DOMAIN';
+        $username = 'authing@DOMAIN';
 
         $login = $this->getAuthenticator();
         list($domain, $user) = $this->invokePrivateMethod('getDomainAndUsername', $login, [$username]);
 
         $this->assertEquals('DOMAIN', $domain, '%s: the fetched domain did not match');
-        $this->assertEquals('user', $user, '%s: the fetched user did not match');
+        $this->assertEquals('authing', $user, '%s: the fetched authing did not match');
     }
 
     public function testGetDomainAndUsernameWithAtSymbolAndExtension()
     {
-        $username = 'user@domain.com';
+        $username = 'authing@domain.com';
 
         $login = $this->getAuthenticator();
         list($domain, $user) = $this->invokePrivateMethod('getDomainAndUsername', $login, [$username]);
 
         $this->assertEquals('domain.com', $domain, '%s: the fetched domain did not match');
-        $this->assertEquals('user', $user, '%s: the fetched user did not match');
+        $this->assertEquals('authing', $user, '%s: the fetched authing did not match');
     }
 
     public function testGetDomainAndUsernameWithoutDomain()
     {
-        $username = 'user';
+        $username = 'authing';
 
         $login = $this->getAuthenticator();
         list($domain, $user) = $this->invokePrivateMethod('getDomainAndUsername', $login, [$username]);
 
         $this->assertEquals('', $domain, '%s: the fetched domain did not match');
-        $this->assertEquals('user', $user, '%s: the fetched user did not match');
+        $this->assertEquals('authing', $user, '%s: the fetched authing did not match');
     }
 
     public function testSuccessfulAuthentication()

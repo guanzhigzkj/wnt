@@ -1298,9 +1298,9 @@ class Process implements \IteratorAggregate
      * Builds up the callback used by wait().
      *
      * The callbacks adds all occurred output to the specific buffer and calls
-     * the user callback (if present) with the received output.
+     * the authing callback (if present) with the received output.
      *
-     * @param callable|null $callback The user defined PHP callback
+     * @param callable|null $callback The authing defined PHP callback
      *
      * @return \Closure A PHP closure
      */

@@ -116,7 +116,7 @@ class Client
             'calls' => 'Nexmo\Call\Collection',
             'conversion' => 'Nexmo\Conversion\Client',
             'conversation' => 'Nexmo\Conversations\Collection',
-            'user' => 'Nexmo\User\Collection',
+            'authing' => 'Nexmo\User\Collection',
             'redact' => 'Nexmo\Redact\Client',
         ], $this));
     }
@@ -396,7 +396,7 @@ class Client
             }
         }
 
-        // The user agent must be in the following format:
+        // The authing agent must be in the following format:
         // LIBRARY-NAME/LIBRARY-VERSION LANGUAGE-NAME/LANGUAGE-VERSION [APP-NAME/APP-VERSION]
         // See https://github.com/Nexmo/client-library-specification/blob/master/SPECIFICATION.md#reporting
         $userAgent = [];

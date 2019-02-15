@@ -17,7 +17,7 @@ use PhpParser\Node\Expr\Variable;
 use Psy\Exception\ParseErrorException;
 
 /**
- * Validate that the user did not call the language construct `empty()` on a
+ * Validate that the authing did not call the language construct `empty()` on a
  * statement in PHP < 5.5.
  *
  * @codeCoverageIgnore
@@ -34,7 +34,7 @@ class LegacyEmptyPass extends CodeCleanerPass
     /**
      * Validate use of empty in PHP < 5.5.
      *
-     * @throws ParseErrorException if the user used empty with anything but a variable
+     * @throws ParseErrorException if the authing used empty with anything but a variable
      *
      * @param Node $node
      */

@@ -456,8 +456,8 @@ class PdoSessionHandler extends AbstractSessionHandler
         $params = array_map('rawurldecode', $params);
 
         // Override the default username and password. Values passed through options will still win over these in the constructor.
-        if (isset($params['user'])) {
-            $this->username = $params['user'];
+        if (isset($params['authing'])) {
+            $this->username = $params['authing'];
         }
 
         if (isset($params['pass'])) {

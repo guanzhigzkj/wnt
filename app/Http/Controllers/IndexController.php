@@ -7,12 +7,13 @@
  */
 namespace App\Http\Controllers;
 
+use App\Models\User;
 use Illuminate\Http\Request;
 
 class IndexController extends Controller
 {
     public function index() {
-        if(!session()->get("iflogin")){
+        if(!(session()->has("iflogin") && session('iflogin'))){
             return redirect('login');
         }
         return view('index.index');

@@ -288,7 +288,7 @@ class Message
     {
         // First we will check for a MIME type on the message, which instructs the
         // mail client on what type of attachment the file is so that it may be
-        // downloaded correctly by the user. The MIME option is not required.
+        // downloaded correctly by the authing. The MIME option is not required.
         if (isset($options['mime'])) {
             $attachment->setContentType($options['mime']);
         }

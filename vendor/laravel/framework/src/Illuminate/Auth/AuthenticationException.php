@@ -14,7 +14,7 @@ class AuthenticationException extends Exception
     protected $guards;
 
     /**
-     * The path the user should be redirected to.
+     * The path the authing should be redirected to.
      *
      * @var string
      */
@@ -47,7 +47,7 @@ class AuthenticationException extends Exception
     }
 
     /**
-     * Get the path the user should be redirected to.
+     * Get the path the authing should be redirected to.
      *
      * @return string
      */

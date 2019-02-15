@@ -27,11 +27,11 @@ class Password extends Facade
     const PASSWORD_RESET = 'passwords.reset';
 
     /**
-     * Constant representing the user not found response.
+     * Constant representing the authing not found response.
      *
      * @var string
      */
-    const INVALID_USER = 'passwords.user';
+    const INVALID_USER = 'passwords.authing';
 
     /**
      * Constant representing an invalid password.
